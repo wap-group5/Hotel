@@ -15,20 +15,14 @@
     <link href="resources/images/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
 <body>
+<div class="loginContainer">
 
-    <form method="POST">
-        <label for="username"></label>
-        <input type="text" name="username" id="username" /><br/>
-
-        <label for="password"></label>
-        <input type="password" name="password" id="password"/><br/>
-
-        <label>Remember Me</label>
-        <input type="checkbox" value="1" name="remember"/><br/>
-
-        <input type="submit" text="Login"/>
-
+    <form method="POST" class="loginForm" action="login">
+        <h1>Login Form</h1>
+        <input type="text" placeholder="Username" id="username">
+        <input type="password" placeholder="password" id="password">
+        <input type="submit" value="Login">
     </form>
-
+</div>
 </body>
 </html>

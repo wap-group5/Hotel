@@ -1,4 +1,4 @@
-package controller;
+package com.group5.controller;
 
 import java.io.IOException;
 
