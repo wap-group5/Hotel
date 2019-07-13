@@ -16,7 +16,10 @@
   </head>
   <body>
   <div id="header">
-
+    <div class="navbar">
+      <a class="active" href="#">Hotel Management System</a>
+      <a href="#" class="login">Login</a>
+    </div>
   </div>
   <div id="container">
 
