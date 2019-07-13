@@ -2,6 +2,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+    background-color: #ebecf0;
 }
 
 /* Style the navigation bar */
@@ -13,7 +14,6 @@ body {
 /* Navbar links */
 .navbar a {
     float: left;
-    text-align: center;
     padding: 12px;
     color: #001959;
     text-decoration: none;
@@ -35,4 +35,75 @@ body {
         float: none;
         display: block;
     }
+}
+
+#container {
+    padding: 1%;
+    margin: 1%;
+    display: inline-block;
+}
+
+.column {
+    float: left;
+    clear: right;
+}
+
+.left {
+    width: 75%;
+}
+
+.right {
+    width: 25%;
+    text-align: center;
+}
+
+button {
+    font-size: 20px;
+    background-color: #005aeb;
+    color: #FFFFFF;
+    padding: 14px 35px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005a9E;
+}
+
+.left img {
+    width: 95%;
+}
+
+.right button {
+    width: 90%;
+}
+
+#roomRate {
+    padding: 1%;
+    margin: 1%;
+}
+
+.roomInfo {
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    overflow: auto;
+}
+
+.roomInfo img {
+    width: 30%;
+    float: left;
+    overflow: auto;
+}
+
+.roomInfo p {
+
+}
+
+.roomFeature {
+    display: inline;
+}
+
+.roomPrice {
+    float: right;
 }
