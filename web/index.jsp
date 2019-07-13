@@ -12,6 +12,24 @@
     <title>Hotel Management System</title>
   </head>
   <body>
-  $END$
+  <div id="header">
+    <div id="navigation-container">
+      <img src="resources/images/logo.png" alt="Hotel Management System">
+
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Get in Touch</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="container">
+
+  </div>
+  <div id="footer">
+
+  </div>
   </body>
 </html>
