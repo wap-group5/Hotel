@@ -14,15 +14,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href="resources/images/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
-<body>
-<div class="loginContainer">
+<body class="loginPageBody">
+
 
     <form method="POST" class="loginForm" action="login">
         <h1>Login Form</h1>
-        <input type="text" placeholder="Username" id="username">
-        <input type="password" placeholder="password" id="password">
+        <br/>
+
+        <label for="username">Username: </label><br/>
+        <input type="text" placeholder="Username" id="username" value= "${cookie.username.value}"/><br/>
+        <label for="password">Password: </label><br/>
+        <input type="password" placeholder="Password" id="password" /><br/>
+        <label>Remember Me</label><input type="checkbox" name="remember"  />
         <input type="submit" value="Login">
+
+        <p>${msg}</p>
     </form>
-</div>
+
 </body>
 </html>
