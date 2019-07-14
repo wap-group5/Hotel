@@ -5,7 +5,7 @@ package com.group5.model;
  * of Guest who is looking for reserving a room
  */
 public class Guest {
-    private Integer id;
+    private Integer id =0;// todo..........................
     // personal details
     private String firstName;
     private String lastName;
@@ -14,14 +14,14 @@ public class Guest {
     private String dateOfBirth;
     private String phoneNumber;
     private String addressLineOne;
-    private String getAddressLineTwo;
+    private String addressLineTwo;
     private String city;
     private String state;
     private String zipCode;
     private String country;
     // booking duration
     private String checkInTime;
-    private String checkOUtTime;
+    private String checkOutTime;
     private String typeOfBedRoom;// 1_bedRoom or 2_bedRoom
     private String moreInfoTextArea;
     // payment Info
@@ -33,8 +33,40 @@ public class Guest {
     // constructor
 
 
-    public Guest() {
+//    public Guest() {
+//    }
+
+    public Guest( String firstName, String lastName, String emailAddress,
+                 String socialSecurity, String dateOfBirth, String phoneNumber, String addressLineOne,
+                 String addressLineTwo, String city, String state, String zipCode, String country,
+                 String checkInTime, String checkOutTime, String typeOfBedRoom, String moreInfoTextArea,
+                 String paymentType, String cardNumber, String expireDate, String sCode,
+                 String paymentAgreement) {
+
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.emailAddress = emailAddress;
+        this.socialSecurity = socialSecurity;
+        this.dateOfBirth = dateOfBirth;
+        this.phoneNumber = phoneNumber;
+        this.addressLineOne = addressLineOne;
+        this.addressLineTwo = addressLineTwo;
+        this.city = city;
+        this.state = state;
+        this.zipCode = zipCode;
+        this.country = country;
+        this.checkInTime = checkInTime;
+        this.checkOutTime = checkOutTime;
+        this.typeOfBedRoom = typeOfBedRoom;
+        this.moreInfoTextArea = moreInfoTextArea;
+        this.paymentType = paymentType;
+        this.cardNumber = cardNumber;
+        this.expireDate = expireDate;
+        this.sCode = sCode;
+        this.paymentAgreement = paymentAgreement;
     }
+
+
     // getters and setters pair
 
     public String getFirstName() {
@@ -93,12 +125,12 @@ public class Guest {
         this.addressLineOne = addressLineOne;
     }
 
-    public String getGetAddressLineTwo() {
-        return getAddressLineTwo;
+    public String getAddressLineTwo() {
+        return addressLineTwo;
     }
 
-    public void setGetAddressLineTwo(String getAddressLineTwo) {
-        this.getAddressLineTwo = getAddressLineTwo;
+    public void setAddressLineTwo(String addressLineTwo) {
+        this.addressLineTwo = addressLineTwo;
     }
 
     public String getCity() {
@@ -141,12 +173,12 @@ public class Guest {
         this.checkInTime = checkInTime;
     }
 
-    public String getCheckOUtTime() {
-        return checkOUtTime;
+    public String getCheckOutTime() {
+        return checkOutTime;
     }
 
-    public void setCheckOUtTime(String checkOUtTime) {
-        this.checkOUtTime = checkOUtTime;
+    public void setCheckOutTime(String checkOutTime) {
+        this.checkOutTime = checkOutTime;
     }
 
     public String getTypeOfBedRoom() {
@@ -226,13 +258,13 @@ public class Guest {
                 ", dateOfBirth='" + dateOfBirth + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", addressLineOne='" + addressLineOne + '\'' +
-                ", getAddressLineTwo='" + getAddressLineTwo + '\'' +
+                ", addressLineTwo='" + addressLineTwo + '\'' +
                 ", city='" + city + '\'' +
                 ", state='" + state + '\'' +
                 ", zipCode='" + zipCode + '\'' +
                 ", country='" + country + '\'' +
                 ", checkInTime='" + checkInTime + '\'' +
-                ", checkOUtTime='" + checkOUtTime + '\'' +
+                ", checkOutTime='" + checkOutTime + '\'' +
                 ", typeOfBedRoom='" + typeOfBedRoom + '\'' +
                 ", moreInfoTextArea='" + moreInfoTextArea + '\'' +
                 ", paymentType='" + paymentType + '\'' +

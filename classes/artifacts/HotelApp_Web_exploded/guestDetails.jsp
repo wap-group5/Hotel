@@ -1,5 +1,5 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--this is the guest details if the guest needs to book--%>
 <html lang="en">
     <!-- the header part -->
 <head>
@@ -13,7 +13,7 @@
                     <h1> Room Reservation Form</h1>
                 </div><!-- the FormHead -->
         <!-- the entire form div      -->
-        <form action="/guest" method="POST">
+        <form action="guest" method="POST">
             <div id="content">
                 <div id="personalAndBilling">
                     <!-- personalAndBilling -->
@@ -69,7 +69,8 @@
                             <option>1_BedRoom </option>
                             <option>2_BedRoom</option>                                
                         </select></p>
-                        <p id="moreInfo" >SpecialRequirement write here :     <textarea name="moreInfoTextArea"></textarea></p>
+                        <p id="moreInfo" >SpecialRequirement write here :
+                            <textarea name="moreInfoTextArea"></textarea></p>
                      
                     </div> <!-- the Shipping Address div end-->
                     <!-- the payment Information -->
@@ -97,8 +98,8 @@
                     </div> <!-- payment div ends here -->
                     <!-- check for agreement -->
                     <p>press continue for process payment no for cancel?
-                        <input type="radio" name="ok" value="Yes" /> Continue
-                        <input type="radio" name="ok" value="No" /> No </p>
+                        <input type="radio" name="paymentAgreement" value="Yes" /> Continue
+                        <input type="radio" name="paymentAgreement" value="No" /> No </p>
                 </div>
             </div>
             <!-- the submit and reset buttons -->

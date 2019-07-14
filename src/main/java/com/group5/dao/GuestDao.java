@@ -7,6 +7,7 @@ import com.group5.model.Guest;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class GuestDao {
     Map<Integer, Guest> guestDb = new HashMap<Integer, Guest>();
@@ -22,7 +23,7 @@ public class GuestDao {
 
     // read All
     public List<Guest> getAllGuest(){
-        return (List<Guest>) guestDb.values();
+        return guestDb.values().stream().collect(Collectors.toList());
     }
     //update
     public void updateGuest( Guest guest){

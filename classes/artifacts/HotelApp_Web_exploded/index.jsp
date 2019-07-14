@@ -30,6 +30,7 @@
     <div class="column right">
 <%--        <button id="btnBooking" href="guestDetails.jsp" text="Book Now">Book Now</button>--%>
         <a href="guestDetails.jsp" class="guest">Book Now</a>
+
     </div>
 </div>
 <div id="roomRate">
