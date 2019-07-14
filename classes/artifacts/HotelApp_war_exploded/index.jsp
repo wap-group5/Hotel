@@ -18,7 +18,9 @@
 <body>
 <div id="header">
     <div class="navbar">
-        <a class="active" href="#">Hotel Management System</a>
+        <a href="#">
+            <img src="resources/images/logo2.png" alt="Hotel Management System" width="320"/>
+        </a>
         <a href="login.jsp" class="login">Login</a>
     </div>
 </div>
@@ -58,7 +60,10 @@
     </div>
 </div>
 <div id="footer">
-    <p>Copy Right &copy; 2019 Group 5 <br/>Hotel Management System</p>
+    <pre>
+Copyright &copy; 2019 Group 5
+Hotel Management System
+    </pre>
 </div>
 </body>
 </html>

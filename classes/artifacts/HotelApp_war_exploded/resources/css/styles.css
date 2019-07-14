@@ -21,12 +21,15 @@ body {
 }
 
 .navbar {
-    height: 45px;
+    height: 60px;
+    background-color: white;
+    border: 1px solid lightgray;
 }
 
 .login {
     position: absolute;
-    right: 0;
+    right: 10;
+    top: 10;
 }
 
 /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
@@ -108,11 +111,11 @@ button:hover {
     float: right;
 }
 
-/* Login Form Styling */
-.loginContainer {
-    background-image: url("../images/pool.png");
+#footer {
+    text-align: center;
 }
 
+/* Login Form Styling */
 .blueButton {
     font-size: 18px;
     background-color: #005aeb;
@@ -218,21 +221,4 @@ input[type="submit"] {
     border: none;
     background-color: #005aeb;
     border-radius: 5px;
-    box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #497a78, 0px 10px 5px #999;
-}
-
-.shadow {
-    background: #000;
-    border-radius: 12px 12px 4px 4px;
-    box-shadow: 0 0 20px 10px #000;
-    height: 12px;
-    margin: 30px auto;
-    opacity: 0.2;
-    width: 270px;
-}
-
-
-input[type="submit"]:active {
-    top:3px;
-    box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #31524d, 0px 5px 3px #999;
 }

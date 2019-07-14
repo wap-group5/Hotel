@@ -19,9 +19,12 @@
 
     <form method="POST" class="loginForm" action="login">
         <h1>Login Form</h1>
-        <input type="text" placeholder="Username" id="username">
-        <input type="password" placeholder="password" id="password">
+        <input type="text" placeholder="Username" id="username" value= "${cookie.username.value}"/>
+        <input type="password" placeholder="Password" id="password" />
+        <input type="checkbox" name="remember"  /><label> Remember Me</label>
         <input type="submit" value="Login">
+
+        <p>${msg}</p>
     </form>
 </div>
 </body>
