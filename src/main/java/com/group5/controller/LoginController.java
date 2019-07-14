@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
 
+@WebServlet("/login")
 public class LoginController extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -22,22 +23,35 @@ public class LoginController extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("username", userName);
             if (remember != null) {
-                Cookie cookie = new Cookie("username", userName);
-                cookie.setMaxAge(60 * 60 * 24 * 30);
-                response.addCookie(cookie);
+                Cookie name = new Cookie("username", userName);
+                Cookie rem = new Cookie("remember", remember);
+                //Set cookie age for 1 month
+                name.setMaxAge(60 * 60 * 24 * 30);
+                rem.setMaxAge(60 * 60 * 24 * 30);
+                response.addCookie(name);
+                response.addCookie(rem);
             } else {
-                Cookie cookie = new Cookie("username", null);
-                cookie.setMaxAge(0);
-                response.addCookie(cookie);
+                //Clear cookie
+                Cookie name = new Cookie("username", null);
+                Cookie rem = new Cookie("remember", null);
+                name.setMaxAge(0);
+                rem.setMaxAge(0);
+                response.addCookie(name);
+                response.addCookie(rem);
             }
+
+            //Clear error message if the user success
+            String errorMessage = "";
+            request.getSession().setAttribute("msg", errorMessage);
+
+            //forward to welcome or checkin page
             request.getRequestDispatcher("/welcome.jsp").forward(request, response);
-            return;
+
         } else {
-            String errorMessage = "Invalid username or password! Please try again";
+            String errorMessage = "Invalid username or password!";
             request.getSession().setAttribute("msg", errorMessage);
             response.sendRedirect("login");
 
-            return;
         }
     }
 

@@ -30,6 +30,14 @@
     </div>
     <div class="column right">
         <button id="btnBooking" text="Book Now">Book Now</button>
+        <h3>The best American hotel</h3>
+        <p>&#11088;&#11088;&#11088;&#11088;&#11088;</p>
+        <p>
+            This smoke-free hotel features an indoor pool, a fitness center, and a bar/lounge. Free buffet breakfast and
+            free self parking are also provided. Other amenities include a spa tub, coffee/tea in a common area, and a
+            business center. All 63 rooms provide free WiFi and free wired Internet, LCD TVs with cable channels, and
+            conveniences like refrigerators and microwaves.
+        </p>
     </div>
 </div>
 <div id="roomRate">
