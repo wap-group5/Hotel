@@ -35,28 +35,32 @@
 <div id="roomRate">
     <div class="roomInfo">
         <img src="resources/images/one-bed-room.png" alt="One Bed Room"/>
-        <p class="roomFeature">
-            <strong>Standard Room, 1 Queen Bed</strong><br/>
-            Free Wi-Fi<br/>
-            Free Breakfast<br/>
-            Free Parking
-        </p>
-        <p class="roomPrice">
-            $110/night
-        </p>
+        <div class="roomRateDetail">
+            <p class="roomFeature">
+                <strong>Standard Room, 1 Queen Bed</strong><br/>
+                Free Wi-Fi<br/>
+                Free Breakfast<br/>
+                Free Parking
+            </p>
+            <p class="roomPrice">
+                $110/night
+            </p>
+        </div>
     </div>
 
     <div class="roomInfo">
         <img src="resources/images/two-bed-room.png" alt="Two Bed Room"/>
-        <p>
-            <strong>Standard Room, 2 Queen Beds</strong><br/>
-            Free Wi-Fi<br/>
-            Free Breakfast<br/>
-            Free Parking
-        </p>
-        <p class="roomPrice">
-            $175/night
-        </p>
+        <div class="roomRateDetail">
+            <p class="roomFeature">
+                <strong>Standard Room, 2 Queen Bed</strong><br/>
+                Free Wi-Fi<br/>
+                Free Breakfast<br/>
+                Free Parking
+            </p>
+            <p class="roomPrice">
+                $175/night
+            </p>
+        </div>
     </div>
 </div>
 <div id="footer">
