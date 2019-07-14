@@ -1,5 +1,5 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--this is the guest details if the guest needs to book--%>
 <html lang="en">
     <!-- the header part -->
 <head>
