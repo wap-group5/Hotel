@@ -85,8 +85,11 @@ public class GuestController extends HttpServlet {
             checkInTime,  checkOutTime,  typeOfBedRoom, moreInfoTextArea,
            paymentType,  cardNumber,  expireDate,  sCode,
             paymentAgreement);
+   // adding object guest
             dao.addGuest(guest);
+
         HttpSession session = request.getSession();
+
         session.setAttribute("myGuest",dao.getAllGuest());
 
         HttpSession my = request.getSession();

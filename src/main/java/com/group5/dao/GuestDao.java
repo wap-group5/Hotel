@@ -13,6 +13,7 @@ public class GuestDao {
     Map<Integer, Guest> guestDb = new HashMap<Integer, Guest>();
     //Crud manipulation
     // create
+
     public void addGuest(Guest guest){
         guestDb.put(genId(),guest);
     }
