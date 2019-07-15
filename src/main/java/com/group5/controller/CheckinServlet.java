@@ -24,6 +24,8 @@ public class CheckinServlet extends HttpServlet {
     String guestId = request.getParameter("id");
         Guest guest = guestDao.getGuestById(Integer.parseInt(guestId));
         guest.setCheckInTime(LocalDateTime.now().toString());
+        guest.setCheckedin(true);
+        guestDao.addGuest(guest);
         response.sendRedirect("welcome.jsp");
 
     }

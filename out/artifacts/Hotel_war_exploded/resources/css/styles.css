@@ -84,6 +84,11 @@ button:hover {
     background-color: #005a9E;
 }
 
+button a {
+    color: white;
+    text-decoration: none;
+}
+
 .left img {
     width: 95%;
 }

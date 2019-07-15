@@ -1,9 +1,5 @@
 package com.group5.model;
-
-
-
 import java.util.Random;
-
 /**
  * This pojo Guest class will have the info
  * of Guest who is looking for reserving a room
@@ -37,8 +33,15 @@ public class Guest {
     private String sCode;
     private String paymentAgreement; // radio button yes or no
     // constructor
+    private boolean checkedin = false;
 
+    public boolean isCheckedin() {
+        return checkedin;
+    }
 
+    public void setCheckedin(boolean checkedin) {
+        this.checkedin = checkedin;
+    }
 //    public Guest() {
 //    }
 
@@ -256,28 +259,28 @@ public class Guest {
     @Override
     public String toString() {
         return "Guest{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", emailAddress='" + emailAddress + '\'' +
-                ", socialSecurity='" + socialSecurity + '\'' +
-                ", dateOfBirth='" + dateOfBirth + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", addressLineOne='" + addressLineOne + '\'' +
-                ", addressLineTwo='" + addressLineTwo + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
-                ", zipCode='" + zipCode + '\'' +
-                ", country='" + country + '\'' +
-                ", checkInTime='" + checkInTime + '\'' +
-                ", checkOutTime='" + checkOutTime + '\'' +
-                ", typeOfBedRoom='" + typeOfBedRoom + '\'' +
-                ", moreInfoTextArea='" + moreInfoTextArea + '\'' +
-                ", paymentType='" + paymentType + '\'' +
-                ", cardNumber='" + cardNumber + '\'' +
-                ", expireDate='" + expireDate + '\'' +
-                ", sCode='" + sCode + '\'' +
-                ", paymentAgreement='" + paymentAgreement + '\'' +
+                "id=" + id + "\n"+
+                ", firstName='" + firstName + "\n" +
+                ", lastName='" + lastName + "\n" +
+                ", emailAddress='" + emailAddress +  "\n" +
+                ", socialSecurity='" + socialSecurity +  "\n" +
+                ", dateOfBirth='" + dateOfBirth +  "\n" +
+                ", phoneNumber='" + phoneNumber +  "\n" +
+                ", addressLineOne='" + addressLineOne +  "\n" +
+                ", addressLineTwo='" + addressLineTwo +  "\n" +
+                ", city='" + city +  "\n" +
+                ", state='" + state +  "\n" +
+                ", zipCode='" + zipCode +  "\n" +
+                ", country='" + country +  "\n" +
+                ", checkInTime='" + checkInTime +  "\n" +
+                ", checkOutTime='" + checkOutTime +  "\n" +
+                ", typeOfBedRoom='" + typeOfBedRoom +  "\n" +
+                ", moreInfoTextArea='" + moreInfoTextArea +  "\n" +
+                ", paymentType='" + paymentType +  "\n" +
+                ", cardNumber='" + cardNumber +  "\n" +
+                ", expireDate='" + expireDate +  "\n" +
+                ", sCode='" + sCode +  "\n" +
+                ", paymentAgreement='" + paymentAgreement +  "\n" +
                 '}';
     }
 }

@@ -33,7 +33,7 @@
     <img class="w3-image" src="resources/images/hotel.jpg" alt="The Hotel" style="min-width:1000px" width="1500" height="800">
     <div class="w3-display-left w3-padding w3-col l6 m8">
         <div class="w3-container w3-red">
-            <h2><i class="fa fa-bed w3-margin-right"></i>Hotel Maharishi</h2>
+            <h2><i class="fa fa-bed w3-margin-right"></i>Hotel Maharishi Guests</h2>
         </div>
         <div class="w3-container w3-white w3-padding-16">
             <table id="tbl_products">
@@ -43,7 +43,6 @@
                       <th>Last Name</th>
                       <th>Check In</th>
                       <th>Check Out</th>
-
                   </tr>
                   </thead>
                 <tbody>
@@ -51,15 +50,15 @@
                     <td>John</td>
                     <td>Doe </td>
                     <td><i href="#rooms" class="fa fa-calendar-o"></i> <a href="#rooms"> Check In</a></td>
-                    <td><i class="fa fa-credit-card" aria-hidden="true"></i> <a href="#rooms"> Check Out</a>
-             <%--   <c:forEach items="${guests}" var="guest">
+                    <td><i class="fa fa-credit-card" aria-hidden="true"></i> <a href="#rooms"> Check Out</a></td>
+                <c:forEach items="${guests}" var="guest">
                     <tr>
-                        <td><c:out value="${guest.fistName}" /></td>
+                        <td><c:out value="${guest.firstName}" /></td>
                         <td><c:out value="${guest.lastName}"/> </td>
-                        <td><c:out value="${product.price}"/> </td>
-                        <td><c:out value="${product.price}"/> </td>
+                    <td><i href="#rooms" class="fa fa-calendar-o"></i> <a id ="<c:out value="${guest.id}" />" href="#rooms"> Check In</a></td>
+                    <td><i class="fa fa-credit-card" aria-hidden="true"></i> <a id ="<c:out value="${guest.id}" />" href="#rooms"> Check Out</a></td>
                     </tr>
-                </c:forEach>--%>
+                </c:forEach>
                 <br>
                 </tbody>
             </table>
@@ -101,11 +100,11 @@
     <div class="w3-row-padding">
         <div class="w3-col m3">
             <label><i class="fa fa-calendar-o"></i> Check In</label>
-            <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY">
+            <input class="w3-input w3-border" type="date" placeholder="DD MM YYYY">
         </div>
         <div class="w3-col m3">
             <label><i class="fa fa-calendar-o"></i> Check Out</label>
-            <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY">
+            <input class="w3-input w3-border" type="date" placeholder="DD MM YYYY">
         </div>
         <div class="w3-col m2">
             <label><i class="fa fa-male"></i> Adults</label>

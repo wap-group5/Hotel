@@ -53,7 +53,7 @@
                     <td><i class="fa fa-credit-card" aria-hidden="true"></i> <a href="#rooms"> Check Out</a></td>
                 <c:forEach items="${guests}" var="guest">
                     <tr>
-                        <td><c:out value="${guest.fistName}" /></td>
+                        <td><c:out value="${guest.firstName}" /></td>
                         <td><c:out value="${guest.lastName}"/> </td>
                     <td><i href="#rooms" class="fa fa-calendar-o"></i> <a id ="<c:out value="${guest.id}" />" href="#rooms"> Check In</a></td>
                     <td><i class="fa fa-credit-card" aria-hidden="true"></i> <a id ="<c:out value="${guest.id}" />" href="#rooms"> Check Out</a></td>

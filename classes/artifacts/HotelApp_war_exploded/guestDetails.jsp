@@ -28,7 +28,7 @@
                         <p>social security :<input type="text" name="socialSecurity" required
                                 placeholder="social Security" />
                         </p>
-                        <p>date of Birth :<input type="date" name="dateOfBirth" required placeholder="(yyyy/mm/dd)"
+                        <p>date of Birth :<input type="date" name="datOfBirth" required placeholder="(yyyy/mm/dd)"
                                 pattern="yyyy/mm/dd" /></p>
                         <p>phone Number :<input type="tel" name="phoneNumber" required placeholder="(xxx)-xxx-xxxx" />
                         </p>
@@ -43,7 +43,7 @@
                                 placeholder="address line two" />
                         </p>
                         <p>City :<input type="text" name="city" required placeholder="city" /></p>
-                        <p>State:<select name="state">
+                        <p>State:<select>
                                 <option> WA </option>
                                 <option> CA </option>
                                 <option> IA </option>
@@ -65,7 +65,7 @@
                         <p>CheckIn time:<input type="date" name="checkInTime" required/>  </p>
                         <p>CheckOutTime:<input type="date" name="checkOutTime" required/>  </p>                                   
                         
-                        <p>Type of Room:<select name="typeOfBedRoom">
+                        <p>Type of Room:<select>
                             <option>1_BedRoom </option>
                             <option>2_BedRoom</option>                                
                         </select></p>
