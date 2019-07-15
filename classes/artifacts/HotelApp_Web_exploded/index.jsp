@@ -3,11 +3,10 @@
   User: james
   Updated: sovicheacheth
   Date: 7/13/19
-  Time: 6:15 AM
+  Time: 4:20 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 <html>
 <head>
     <title>Hotel Management System</title>
@@ -31,16 +30,9 @@
         <img src="resources/images/feature-image-01.png" alt="Hotel Feature Image"/>
     </div>
     <div class="column right">
+<%--        <button id="btnBooking" href="guestDetails.jsp" text="Book Now">Book Now</button>--%>
+        <a href="guestDetails.jsp" class="guest">Book Now</a>
 
-        <button id="btnBooking" text="Book Now">Book Now</button>
-        <h3>The best American hotel</h3>
-        <p>&#11088;&#11088;&#11088;&#11088;&#11088;</p>
-        <p>
-            This smoke-free hotel features an indoor pool, a fitness center, and a bar/lounge. Free buffet breakfast and
-            free self parking are also provided. Other amenities include a spa tub, coffee/tea in a common area, and a
-            business center. All 63 rooms provide free WiFi and free wired Internet, LCD TVs with cable channels, and
-            conveniences like refrigerators and microwaves.
-        </p>
     </div>
 </div>
 <div id="roomRate">
@@ -82,4 +74,3 @@ Hotel Management System
 </div>
 </body>
 </html>
-

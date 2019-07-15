@@ -3,11 +3,10 @@
   User: james
   Updated: sovicheacheth
   Date: 7/13/19
-  Time: 6:15 AM
+  Time: 4:20 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 <html>
 <head>
     <title>Hotel Management System</title>
@@ -23,7 +22,6 @@
             <img src="resources/images/logo2.png" alt="Hotel Management System" width="320"/>
         </a>
         <a href="login.jsp" class="login">Login</a>
-
     </div>
 </div>
 <div id="container">
@@ -31,7 +29,6 @@
         <img src="resources/images/feature-image-01.png" alt="Hotel Feature Image"/>
     </div>
     <div class="column right">
-
         <button id="btnBooking" text="Book Now">Book Now</button>
         <h3>The best American hotel</h3>
         <p>&#11088;&#11088;&#11088;&#11088;&#11088;</p>
@@ -82,4 +79,3 @@ Hotel Management System
 </div>
 </body>
 </html>
-
