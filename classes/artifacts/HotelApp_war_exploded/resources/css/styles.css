@@ -133,7 +133,7 @@ button:hover {
 /* Login Form Styling */
 .loginPageBody {
     background-image: url("../../resources/images/pool.png");
-    background-size: 100%;
+    background-size: cover;
 }
 
 .blueButton {
