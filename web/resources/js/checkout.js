@@ -3,9 +3,9 @@ $(function() {
 
     function chargeCustomer() {
         // language=JQuery-CSS
-        var guestId = $('#geust_id').val();
+        var guestId = $('#guest_id').text();
         var rentBill = $('#rent_Bill').val();
         var  billingInfo= {id: guestId, bill: rentBill};
-        $.post('checkout', {checkout: JSON.stringify(billingInfo)}, "json")
+        $.post('checkout', {billingInfo: JSON.stringify(billingInfo)}, "json")
     }
 });

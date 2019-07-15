@@ -5,8 +5,13 @@
          version="4.0">
     <servlet> <servlet-name>ServletName</servlet-name>
         <servlet-class>com.group5.controller.GuestController</servlet-class>
-    </servlet> <servlet-mapping>
+    </servlet>
+    <servlet-mapping>
     <servlet-name>ServletName</servlet-name>
     <url-pattern>/guest</url-pattern>
-</servlet-mapping>
+     </servlet-mapping>
+    <context-param>
+        <param-name>hotel-contact</param-name>
+        <param-value>support@maharishiHotel.com</param-value>
+    </context-param>
 </web-app>

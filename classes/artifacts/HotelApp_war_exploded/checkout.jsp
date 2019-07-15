@@ -21,8 +21,8 @@
 <div>
 
     <label for="FirstName">Name</label> <c:out value="${guest.firstName}"  />
-    <label for="LastName">Bill</label> <c:out value="${guest.room.rate}"/> id="rent_Bill">
-    <label for="GuestId"></label> <c:out value="${guest.id}" id="geust_id"/>
+    <label for="LastName">Bill</label> <c:out value="${guest.room.rate}"/>
+    <label for="GuestId"></label><span id="guest_id"><c:out value="${guest.id}" /></span>
 </div>
 <div>
     <input id="btn_add" type="submit" value="Submit" />

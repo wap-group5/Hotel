@@ -49,10 +49,10 @@ public class CheckinController extends HttpServlet {
                 guest.setRoom(room);
                 guest.setCheckInTime(LocalDateTime.now().toString());
                 guest.setCheckedin(true);
-                guestDao.addGuest(guest);
+                guestDao.updateGuest(guest);
                 request.getSession().setAttribute("guestDAO", guestDao);
                 checkinReturnModel.setSuccess(true);
-                out.print(gson.toJson(checkinReturnModel));
+
             }else{
                 checkinReturnModel.setSuccess(false);
                 checkinReturnModel.setMessage("Fully Booked!");
@@ -63,17 +63,19 @@ public class CheckinController extends HttpServlet {
             checkinReturnModel.setMessage("Guest is already checked in!");
 
         }
+        out.print(gson.toJson(checkinReturnModel));
 
-        /*
-           request.setAttribute("guest",guest);
-           request.getRequestDispatcher("checkout.jsp").forward(request,response);
-           response.sendRedirect("checkin.jsp");
-        */
 
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        String guestId = request.getParameter("guestId");
+        GuestDao guestDao = (GuestDao) request.getSession().getAttribute("guestDAO");
+        Guest guest = guestDao.getGuestById(Integer.parseInt(guestId));
+        request.setAttribute("guest",guest);
+        request.getRequestDispatcher("checkout.jsp").forward(request,response);
 
     }
 }

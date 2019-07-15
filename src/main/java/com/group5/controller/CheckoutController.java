@@ -22,17 +22,12 @@ import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 
-@WebServlet("/CheckoutController")
+@WebServlet("/checkout")
 public class CheckoutController extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private GuestDao guestDao;
-    private GuestDao dao;
     Gson mapper = new Gson();
 
-    @Override
-    public void init() throws ServletException {
-        dao = new GuestDao();
-    }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -46,27 +41,12 @@ public class CheckoutController extends HttpServlet {
         String jsonSting = request.getParameter("billingInfo");
         BillingInfo billingInfo = mapper.fromJson(request.getParameter("billingInfo"), BillingInfo.class);
         String guestId = billingInfo.getId();
+        GuestDao guestDao = (GuestDao) request.getSession().getAttribute("guestDAO");
         Guest guest = guestDao.getGuestById(Integer.parseInt(guestId));
         float rate = guest.getRoom().getRate();
          String in= guest.getCheckInTime();
-
-        LocalDate today = LocalDate.now();
-
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-
-        //convert String to LocalDate
-        LocalDate localDate = LocalDate.parse(in, formatter);
-//        Period p = Period.between(localDate, today);
-        long intervalDays = ChronoUnit.DAYS.between(localDate, today);
-float totalBill= rate*intervalDays;
-request.getSession().setAttribute("totalBill",totalBill);
-        dao.removeGuest(guest);
-
-
-//        PrintWriter out = response.getWriter();
-//
-//        out.print(mapper.toJson(product));
-        response.sendRedirect("welcome.jsp");
+         guestDao.removeGuest(guest);
+        response.sendRedirect("checkin.jsp");
     }
 
 }
