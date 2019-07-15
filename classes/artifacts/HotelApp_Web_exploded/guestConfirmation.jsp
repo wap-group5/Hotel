@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>Hotel Reservation confirmation</title>
-    <link href="resources/css/guestDetails.css" rel="stylesheet" />
+    <link href="resources/css/confirmedBooking.css" rel="stylesheet" />
 </head>
 <body>
 

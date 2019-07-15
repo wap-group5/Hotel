@@ -52,14 +52,9 @@ body{
 #moreInfo{
 text-align: center;
 }
-<<<<<<< HEAD
-#confirmation{
-    /*background-image: url("background.png");*/
-    color: blue;
-    text-align: center;
-    font-size: 30px;
-}
-=======
+
+
+
 
 /*input[type="text"], input[type="email"], input[type="date"] {*/
 /*    border: 1px solid #a1a3a3;*/
@@ -87,5 +82,5 @@ input[type="reset"] {
     cursor: pointer;
 }
 
->>>>>>> 4941208122efe10b24dd15b905240f983182a4d5
+
 
