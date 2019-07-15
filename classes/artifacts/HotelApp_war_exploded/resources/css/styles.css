@@ -34,11 +34,21 @@ body {
 }
 
 /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
     .navbar a {
         float: none;
         display: block;
     }
+
+    .left {
+        width: 100% !important;
+        padding-bottom: 10px;
+    }
+
+    .right {
+        width: 100% !important;
+    }
+
 }
 
 #container {
@@ -58,7 +68,7 @@ body {
 
 .right {
     width: 25%;
-    text-align: center;
+    /*text-align: center;*/
 }
 
 button {
@@ -79,7 +89,7 @@ button:hover {
 }
 
 .right button {
-    width: 90%;
+    width: 95%;
 }
 
 #roomRate {
@@ -139,7 +149,7 @@ button:hover {
     background: #eceeee;
     border: 1px solid #42464b;
     border-radius: 6px;
-    height: 330px;
+    height: 345px;
     margin: 20px auto 0;
     width: 298px;
 }
@@ -191,4 +201,9 @@ input[type="submit"] {
     border: none;
     background-color: #005aeb;
     border-radius: 5px;
+}
+
+.errorMsg {
+    color: red;
+    margin: 10px 0 0 29px;
 }

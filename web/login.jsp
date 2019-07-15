@@ -16,20 +16,38 @@
 </head>
 <body class="loginPageBody">
 
+<%
+    Cookie[] cookies = request.getCookies();
+    String username = "", password = "", remember = "";
+    if (cookies != null) {
+        for (Cookie cookie : cookies) {
+            if (cookie.getName().equals("username")) {
+                username = cookie.getValue();
+            }
+            if (cookie.getName().equals("remember")) {
+                remember = cookie.getValue();
+            }
+        }
+    }
+%>
 
-    <form method="POST" class="loginForm" action="login">
-        <h1>Login Form</h1>
-        <br/>
 
-        <label for="username">Username: </label><br/>
-        <input type="text" placeholder="Username" id="username" value= "${cookie.username.value}"/><br/>
-        <label for="password">Password: </label><br/>
-        <input type="password" placeholder="Password" id="password" /><br/>
-        <label>Remember Me</label><input type="checkbox" name="remember"  />
-        <input type="submit" value="Login">
+<form method="POST" class="loginForm" action="login">
+    <h1>Login Form</h1>
+    <br/>
 
-        <p>${msg}</p>
-    </form>
+    <label for="username">Username: </label><br/>
+    <input type="text" placeholder="Username" id="username" name="username" value="${cookie.username.value}"/><br/>
+    <label for="password">Password: </label><br/>
+    <input type="password" placeholder="Password" id="password" name="password"/><br/>
+    <label>Remember Me</label>
+    <input type="checkbox" name="remember" value="1" <%= "1".equals(remember.trim()) ? "checked='checked'" : "" %>/>
+    <input type="submit" value="Login">
+
+    <p class="errorMsg">
+        <%=request.getSession().getAttribute("msg") != null ? request.getSession().getAttribute("msg") : ""%>
+    </p>
+</form>
 
 </body>
 </html>
