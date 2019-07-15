@@ -22,6 +22,7 @@
             <img src="resources/images/logo2.png" alt="Hotel Management System" width="320"/>
         </a>
         <a href="login.jsp" class="login">Login</a>
+
     </div>
 </div>
 <div id="container">
@@ -29,7 +30,8 @@
         <img src="resources/images/feature-image-01.png" alt="Hotel Feature Image"/>
     </div>
     <div class="column right">
-        <button id="btnBooking" text="Book Now">Book Now</button>
+
+        <button id="btnBooking" text="Book Now"><a href="guestDetails.jsp">Book Now</a></button>
         <h3>The best American hotel</h3>
         <p>&#11088;&#11088;&#11088;&#11088;&#11088;</p>
         <p>

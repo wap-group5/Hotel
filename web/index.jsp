@@ -31,7 +31,7 @@
     </div>
     <div class="column right">
 
-        <button id="btnBooking" text="Book Now">Book Now</button>
+        <button id="btnBooking" text="Book Now"><a href="guestDetails.jsp">Book Now</a></button>
         <h3>The best American hotel</h3>
         <p>&#11088;&#11088;&#11088;&#11088;&#11088;</p>
         <p>
