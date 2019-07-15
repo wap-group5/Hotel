@@ -88,21 +88,21 @@ public class GuestController extends HttpServlet {
             paymentAgreement);
    // adding object guest
             dao.addGuest(guest);
-
-        HttpSession session = request.getSession();
-
-        session.setAttribute("myGuest",dao.getAllGuest());
-
-        HttpSession my = request.getSession();
-        List<Guest> listOfGuests = (List<Guest>)my.getAttribute("myGuest");
-        PrintWriter out = response.getWriter();
-        out.print("<html><head><title>Test</title></head><body>");
-        out.print("<p> guest</p>");
-        listOfGuests.stream().forEach(p->out.println(p.toString()));
-        out.println("["+my.getAttribute("myGuest").toString()+"]");
-        out.print("</body></html>");
-//        RequestDispatcher rd = request.getRequestDispatcher("servlet2");
-//        rd.forward(request,response);
+//        HttpSession session = request.getSession();
+//
+//        session.setAttribute("myGuest",dao.getAllGuest());
+//
+//        HttpSession my = request.getSession();
+//        List<Guest> listOfGuests = (List<Guest>)my.getAttribute("myGuest");
+//        PrintWriter out = response.getWriter();
+//        out.print("<html><head><title>Test</title></head><body>");
+//        out.print("<p> guest</p>");
+//        listOfGuests.stream().forEach(p->out.println(p.toString()));
+//        out.println("["+my.getAttribute("myGuest").toString()+"]");
+//        out.print("</body></html>");
+////
+//             RequestDispatcher rd = request.getRequestDispatcher("servlet2");
+////        rd.forward(request,response);
 
 
 
