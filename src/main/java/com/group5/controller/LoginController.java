@@ -1,5 +1,6 @@
 package com.group5.controller;
 
+import com.group5.dao.GuestDao;
 import com.group5.model.User;
 
 import javax.servlet.RequestDispatcher;
@@ -11,7 +12,12 @@ import java.io.IOException;
 @WebServlet("/login")
 public class LoginController extends HttpServlet {
     private static final long serialVersionUID = 1L;
+    private GuestDao guestDao;
 
+    @Override
+    public void init() throws ServletException {
+        guestDao = new GuestDao();
+    }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String userName = request.getParameter("username");
@@ -43,7 +49,7 @@ public class LoginController extends HttpServlet {
             //Clear error message if the user success
             String errorMessage = "";
             request.getSession().setAttribute("msg", errorMessage);
-
+            request.setAttribute("guests",guestDao.getAllGuest());
             //forward to welcome or checkin page
             request.getRequestDispatcher("/welcome.jsp").forward(request, response);
 
@@ -61,4 +67,7 @@ public class LoginController extends HttpServlet {
 
         dispatcher.forward(request, response);
     }
+
+
+
 }
