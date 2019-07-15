@@ -13,6 +13,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="resources/css/checkin.css">
+<link rel="script" href="resources/css/modal.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script type="text/javascript"
@@ -25,11 +26,11 @@
 
 <!-- Navigation Bar -->
 <div class="grp5-bar grp5-white grp5-large">
-    <a href="#" class="grp5-bar-item grp5-button grp5-red grp5-mobile"><i class="fa fa-bed grp5-margin-right"></i>HM</a>
+    <a href="#" class="grp5-bar-item grp5-button grp5-red grp5-mobile"><i class="fa fa-bed grp5-margin-right"></i>Attendant</a>
     <a href="#rooms" class="grp5-bar-item grp5-button grp5-mobile">Rooms</a>
-    <a href="#about" class="grp5-bar-item grp5-button grp5-mobile">About</a>
-    <a href="#contact" class="grp5-bar-item grp5-button grp5-mobile">Contact</a>
-    <a href="#contact" class="grp5-bar-item grp5-button grp5-right grp5-light-grey grp5-mobile">Book Now</a>
+    <a href="#about" class="grp5-bar-item grp5-button grp5-mobile">Information</a>
+    <a href="#contact" class="grp5-bar-item grp5-button grp5-mobile">Messages</a>
+    <a href="logout" class="grp5-bar-item grp5-button grp5-right grp5-light-grey grp5-mobile">Logout</a>
 </div>
 <!-- Header -->
 <header id="header" class="grp5-display-container grp5-content" style="max-width:1500px;">
@@ -49,11 +50,6 @@
                   </tr>
                   </thead>
                 <tbody>
-                <tr>
-                    <td>John</td>
-                    <td>Doe </td>
-                    <td><i href="#rooms" class="fa fa-calendar-o"></i> <a href="#rooms"> Check In</a></td>
-                    <td><i class="fa fa-credit-card" aria-hidden="true"></i> <a href="#rooms"> Check Out</a></td>
                 <c:forEach items="${guests}" var="guest">
                     <tr>
                         <td><c:out value="${guest.firstName}" /></td>
@@ -63,7 +59,9 @@
                         <a href="#rooms" class ="checkin" id ="<c:out value="${guest.id}" />"> Check In</a></td>
                     <td>
                         <i class="fa fa-credit-card" aria-hidden="true"></i>
-                        <a href="#rooms" class ="checkout"  id ="<c:out value="${guest.id}" />"> Check Out</a></td>
+                        <a href="<c:url value="/checkin">
+                                    <c:param name="guestId" />
+                                </c:url>" class ="checkout"  >Check Out</a></td>
                     </tr>
                 </c:forEach>
                 <br>
@@ -142,8 +140,8 @@
 
     <div class="grp5-row-padding" id="about">
         <div class="grp5-col l4 12">
-            <h3>About</h3>
-            <h6>Our hotel is one of a kind. It is truely amazing. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h6>
+            <h3>Information</h3>
+            <h6>Our hotel is one of a kind. It is truely amazing. Located in Fairfield Iowa, From the kindness of a friendly greeting to the comfort of a good night’s sleep, you’ll find everything you need right here.</h6>
             <p>We accept: <i class="fa fa-credit-card grp5-large"></i> <i class="fa fa-cc-mastercard grp5-large"></i> <i class="fa fa-cc-amex grp5-large"></i> <i class="fa fa-cc-cc-visa grp5-large"></i><i class="fa fa-cc-paypal grp5-large"></i></p>
         </div>
         <div class="grp5-col l8 12">
@@ -153,7 +151,7 @@
     </div>
 
     <div class="grp5-row-padding grp5-large grp5-center" style="margin:32px 0">
-        <div class="grp5-third"><i class="fa fa-map-marker grp5-text-red"></i> 423 Some adr, Chicago, US</div>
+        <div class="grp5-third"><i class="fa fa-map-marker grp5-text-red"></i> 52257 Fairfield, IOWAFrom the kindness of a friendly greeting to the comfort of a good night’s sleep, you’ll find everything you need right here., US</div>
         <div class="grp5-third"><i class="fa fa-phone grp5-text-red"></i> Phone: +00 151515</div>
         <div class="grp5-third"><i class="fa fa-envelope grp5-text-red"></i> Email: mail@mail.com</div>
     </div>
@@ -207,19 +205,19 @@
     </div>
 
     <div class="grp5-container grp5-padding-32 grp5-black grp5-opacity grp5-card grp5-hover-opacity-off" style="margin:32px 0;">
-        <h2>Get the best offers first!</h2>
-        <p>Join our newsletter.</p>
+        <h2>Be the first to know</h2>
+        <p>Join our company news letter.</p>
         <label>E-mail</label>
         <input class="grp5-input grp5-border" type="text" placeholder="Your Email address">
         <button type="button" class="grp5-button grp5-red grp5-margin-top">Subscribe</button>
     </div>
 
     <div class="grp5-container" id="contact">
-        <h2>Contact</h2>
-        <p>If you have any questions, do not hesitate to ask them.</p>
-        <i class="fa fa-map-marker grp5-text-red" style="width:30px"></i> Chicago, US<br>
+        <h2>Messages</h2>
+        <p>Do you need help? Do not hesitate to ask support.</p>
+        <i class="fa fa-map-marker grp5-text-red" style="width:30px"></i> Support<br>
         <i class="fa fa-phone grp5-text-red" style="width:30px"></i> Phone: +00 151515<br>
-        <i class="fa fa-envelope grp5-text-red" style="width:30px"> </i> Email: mail@mail.com<br>
+        <i class="fa fa-envelope grp5-text-red" style="width:30px"> </i> Email: support@mail.com<br>
         <form action="/action_page.php" target="_blank">
             <p><input class="grp5-input grp5-padding-16 grp5-border" type="text" placeholder="Name" required name="Name"></p>
             <p><input class="grp5-input grp5-padding-16 grp5-border" type="text" placeholder="Email" required name="Email"></p>
@@ -231,7 +229,23 @@
     <!-- End page content -->
 </div>
 
+<div id="myModal" class="modal">
 
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Checkin</h2>
+        </div>
+        <div class="modal-body">
+            <p id="message"> this is a message</p>
+        </div>
+        <div class="modal-footer">
+            <%--      <h3></h3>--%>
+        </div>
+    </div>
+
+</div>
 
 <!-- Footer -->
 <footer class="grp5-padding-32 grp5-black grp5-center grp5-margin-top">
