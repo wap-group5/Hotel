@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Enumeration;
 import java.util.Iterator;
+import java.util.List;
 
 
 public class GuestController extends HttpServlet {
@@ -93,9 +94,11 @@ public class GuestController extends HttpServlet {
         session.setAttribute("myGuest",dao.getAllGuest());
 
         HttpSession my = request.getSession();
+        List<Guest> listOfGuests = (List<Guest>)my.getAttribute("myGuest");
         PrintWriter out = response.getWriter();
         out.print("<html><head><title>Test</title></head><body>");
         out.print("<p> guest</p>");
+        listOfGuests.stream().forEach(p->out.println(p.toString()));
         out.println("["+my.getAttribute("myGuest").toString()+"]");
         out.print("</body></html>");
 //        RequestDispatcher rd = request.getRequestDispatcher("servlet2");
