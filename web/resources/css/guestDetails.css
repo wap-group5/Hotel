@@ -2,29 +2,32 @@
 This css file, styles the shoppingCart html file. provides 
 border and alignments and colors  */
 body{
-    background-color: rgb(129, 149, 168);
+    /*background-color: rgb(129, 149, 168);*/
+    background-image: url("../images/bedroom-background.jpg");
+    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+    background-size: cover;
 }
 /* the header part */
-#theHeader{ 
+#theHeader {
     text-align: center;
     font-size: 11pt;
-    color: rgb(215, 228, 40);
+    color: white;
     font-weight: bold;
-    font-family: Verdana Tahoma sans-serif  ;
-    text-shadow:3px 3px #999999;  
-    text-align: center;
-    border: 8px solid rgb(193, 197, 181);
-    border-radius:23px;
-    background: url("rbg.png");
+    /* font-family: Verdana Tahoma sans-serif; */
+    /* text-shadow: 3px 3px #999999; */
+    border: 3px solid rgb(193, 197, 181);
+    border-radius: 15px;
+    /* background: url(rbg.png); */
+    background-color: #005aeb;
 }
 /* the Entire form  */
-#theEntireForm{
-    background-image: url("background.png");
-    margin-top: 12%;
+#theEntireForm {
+    /* background-image: url(background.png); */
     margin-left: 12%;
     margin-right: 12%;
-    border: 12px gray solid;
-    border-radius:23px;
+    border: 6px gray solid;
+    border-radius: 21px;
+    background-color: #ebecf0;
 }
 /* part of the form which has two columns */
 #content{
