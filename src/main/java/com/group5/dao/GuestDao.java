@@ -3,6 +3,7 @@ package com.group5.dao;
 
 
 import com.group5.model.Guest;
+import com.group5.model.User;
 
 import java.util.HashMap;
 import java.util.List;
@@ -73,6 +74,9 @@ public class GuestDao {
         int id = genId();
         guest.setId(id);
         guestDb.put(id,guest);
+    }
+    public void removeGuest(Guest guest){
+        guestDb.remove(guest.getId(), guest);
     }
     //read
     public Guest getGuest(Integer id){
