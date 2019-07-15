@@ -1,13 +1,13 @@
 # Hotel
 
-Group Member
-Sovichea
-Aaron G
-James Alituhikya
-Samuel 
+Group 5:<br/>
+Sovichea Cheth<br/>
+Aaron Gezai<br/>
+James Alituhikya<br/>
+Samuel Tesfabruk<br/>
 
-Project Introduction
-Hotel Management System
+Project Introduction<br/>
+Hotel Management System<br/>
 
-Technologies
+Technologies<br/>
 HTML, CSS, JavaScript, jQUery, JSP, Servlet, JSTL, GSON
