@@ -1,11 +1,17 @@
 package com.group5.model;
 
+import org.graalvm.compiler.nodes.memory.ReadNode;
+
+import java.util.Random;
+
 /**
  * This pojo Guest class will have the info
  * of Guest who is looking for reserving a room
  */
 public class Guest {
-    private Integer id =0;// todo..........................
+    public static final int randSize =100000;
+    private Random random = new Random(randSize);
+    private Integer id ;
     // personal details
     private String firstName;
     private String lastName;
@@ -42,7 +48,7 @@ public class Guest {
                  String checkInTime, String checkOutTime, String typeOfBedRoom, String moreInfoTextArea,
                  String paymentType, String cardNumber, String expireDate, String sCode,
                  String paymentAgreement) {
-
+        this.id = random.nextInt();
         this.firstName = firstName;
         this.lastName = lastName;
         this.emailAddress = emailAddress;
