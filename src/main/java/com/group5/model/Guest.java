@@ -34,6 +34,7 @@ public class Guest {
     private String paymentAgreement; // radio button yes or no
     // constructor
     private boolean checkedin = false;
+    private Room room;
 
     public boolean isCheckedin() {
         return checkedin;
@@ -253,7 +254,14 @@ public class Guest {
         this.id = id;
     }
 
-    // toString
+    public Room getRoom() {
+        return room;
+    }
+
+    public void setRoom(Room room) {
+        this.room = room;
+    }
+// toString
 
 
     @Override
