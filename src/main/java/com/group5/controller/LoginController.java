@@ -1,6 +1,7 @@
 package com.group5.controller;
 
 import com.group5.dao.GuestDao;
+import com.group5.model.Guest;
 import com.group5.model.User;
 
 import javax.servlet.RequestDispatcher;
@@ -8,6 +9,8 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 @WebServlet("/login")
 public class LoginController extends HttpServlet {
@@ -49,9 +52,16 @@ public class LoginController extends HttpServlet {
             //Clear error message if the user success
             String errorMessage = "";
             request.getSession().setAttribute("msg", errorMessage);
-            request.setAttribute("guests",guestDao.getAllGuest());
+            GuestDao localGuestDAO = guestDao;
+            if(request.getSession().getAttribute("guestDAO") != null){
+                localGuestDAO = (GuestDao)request.getSession().getAttribute("guestDAO");
+            }else{
+                request.getSession().setAttribute("guestDAO", guestDao);
+            }
+
+            request.setAttribute("guests",localGuestDAO.getAllGuest());
             //forward to welcome or checkin page
-            request.getRequestDispatcher("/welcome.jsp").forward(request, response);
+            request.getRequestDispatcher("/checkin.jsp").forward(request, response);
 
         } else {
             String errorMessage = "Invalid username or password!";

@@ -59,17 +59,7 @@ public class GuestDao {
 
     }
     //Crud manipulation
-    // create
-//
-//    Guest{id=-1986972922 , firstName='AARON , lastName='GEZAI ,
-//            emailAddress='AAARON769@GMAIL.COM , socialSecurity='252522 ,
-//            dateOfBirth='2019-07-09 , phoneNumber='7188380622 ,
-//            addressLineOne='12422 17th AV NE , addressLineTwo='cdf
-//            , city='SEATTLE , state='WA , zipCode='98125 , country='United States ,
-//            checkInTime='2019-07-10 , checkOutTime='2019-07-24 ,
-//            typeOfBedRoom='1_BedRoom , moreInfoTextArea='I am vegetarian! ,
-//            paymentType='visa , cardNumber='14141414141414 , expireDate='2019-12-28 , sCode='2565 ,
-//            paymentAgreement='Yes }
+
     public void addGuest(Guest guest){
         int id = genId();
         guest.setId(id);

@@ -18,6 +18,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 
@@ -45,29 +46,20 @@ public class CheckoutController extends HttpServlet {
         String jsonSting = request.getParameter("billingInfo");
         BillingInfo billingInfo = mapper.fromJson(request.getParameter("billingInfo"), BillingInfo.class);
         String guestId = billingInfo.getId();
-        String rate = 
         Guest guest = guestDao.getGuestById(Integer.parseInt(guestId));
+        float rate = guest.getRoom().getRate();
          String in= guest.getCheckInTime();
-//         String out=guestid.getCheckOutTime();
-//         String [] x=in.split("-");
-//         String [] y= out.split("-");
-//        Date date1=new SimpleDateFormat("dd/MM/yyyy").parse(sDate1);
 
         LocalDate today = LocalDate.now();
-//        LocalDate birthday = LocalDate.of(y[0], y[1], y[2]);
-//        SimpleDateFormat formatter = new SimpleDateFormat("dd MMM yyyy");
-//        LocalDate date = formatter.parse(in);
-//        System.out.println(date);
-//        System.out.println(formatter.format(date));
-//        Period p = Period.between(in, out);
 
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/MM/yyyy");
-
-
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
         //convert String to LocalDate
         LocalDate localDate = LocalDate.parse(in, formatter);
-
+//        Period p = Period.between(localDate, today);
+        long intervalDays = ChronoUnit.DAYS.between(localDate, today);
+float totalBill= rate*intervalDays;
+request.getSession().setAttribute("totalBill",totalBill);
         dao.removeGuest(guest);
 
 

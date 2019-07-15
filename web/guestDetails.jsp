@@ -10,7 +10,7 @@
 <body>
     <div id="theEntireForm">      
             <div id="theHeader">   <!-- the head of the form -->
-                    <h1> Room Reservation Form</h1>
+                    <h1>Room Reservation Form</h1>
                 </div><!-- the FormHead -->
         <!-- the entire form div      -->
         <form action="guest" method="POST">
@@ -20,17 +20,17 @@
                     <div class="block_border">
                         <!-- the personal details div  -->
                         <h3> Personal details</h3>
-                        <p>first Name :<input type="text" name="firstName" required placeholder="first name" /></p>
-                        <p>last Name :<input type="text" name="lastName" required placeholder="last name" /></p>
-                        <p>email Address :<input type="email" name="emailAddress" required
+                        <p>First Name :<input type="text" name="firstName" required placeholder="first name" /></p>
+                        <p>Last Name :<input type="text" name="lastName" required placeholder="last name" /></p>
+                        <p>Email Address :<input type="email" name="emailAddress" required
                                 placeholder="email Address" />
                         </p>
-                        <p>social security :<input type="text" name="socialSecurity" required
+                        <p>Social security :<input type="text" name="socialSecurity" required
                                 placeholder="social Security" />
                         </p>
-                        <p>date of Birth :<input type="date" name="dateOfBirth" required placeholder="(yyyy/mm/dd)"
+                        <p>Date of Birth :<input type="date" name="dateOfBirth" required placeholder="(yyyy/mm/dd)"
                                 pattern="yyyy/mm/dd" /></p>
-                        <p>phone Number :<input type="tel" name="phoneNumber" required placeholder="(xxx)-xxx-xxxx" />
+                        <p>Phone Number :<input type="tel" name="phoneNumber" required placeholder="(xxx)-xxx-xxxx" />
                         </p>
                     </div>
                     <div class="block_border">
@@ -104,8 +104,8 @@
             </div>
             <!-- the submit and reset buttons -->
             <div class="block_border">
-                <input type="submit" value="submit" />
-                <input type="reset" value="reset" />
+                <input type="submit" value="Submit" />
+                <input type="reset" value="Reset" />
             </div>
 
         </form>
