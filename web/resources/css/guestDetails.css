@@ -52,5 +52,10 @@ body{
 #moreInfo{
 text-align: center;
 }
-
+#confirmation{
+    /*background-image: url("background.png");*/
+    color: blue;
+    text-align: center;
+    font-size: 30px;
+}
 
