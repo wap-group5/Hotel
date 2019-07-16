@@ -27,10 +27,18 @@ public class AuthFilter implements Filter {
             return;
         }
 
+        //If the user not login yet and try to access checkin and checkout page
+        if (path.equals("/checkin") || path.equals("/checkout")) {
+            String message = "Please login first!";
+            request.getSession().setAttribute("msg", message);
+            response.sendRedirect("/login");
+        }
+
         User user = (User) request.getSession().getAttribute("username");
         if (user != null) {
             filterChain.doFilter(request, response);
         } else {
+
             String message = "Please login first!";
             request.getSession().setAttribute("msg", message);
             response.sendRedirect("/login");

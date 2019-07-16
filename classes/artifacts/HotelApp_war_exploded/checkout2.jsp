@@ -83,7 +83,7 @@
             <td class="hidden-xs text-center"><strong id="totalPrice">Total <c:out value="${guest.room.rate}"/></strong></td>
             <td><a href="#">
                 <input type="hidden" id="guest_id" value="${guest.id}"/>
-                <input class="btn btn-success btn-block" id="btn_add" type="submit" value="checkout" /> </a></td>
+                <input class="btn btn-success btn-block" id="btn_add" type="submit" value="Checkout" /> </a></td>
 
         </tr>
         </tfoot>
