@@ -19,7 +19,7 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
-    <title>Title</title>
+    <title>Checkout Form</title>
     <script type="text/javascript"
             src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="resources/js/checkout.js"></script>
@@ -38,6 +38,7 @@
 
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <div class="container">
+    <h1>Checkout Form</h1>
     <table id="cart" class="table table-hover table-condensed">
         <thead>
         <tr>
@@ -52,20 +53,22 @@
         <tr>
             <td data-th="Product">
                 <div class="row">
-                    <div class="col-sm-2 hidden-xs"><img src="http://placehold.it/100x100" alt="..." class="img-responsive"/></div>
+                    <div class="col-sm-2 hidden-xs"><img src="resources/images/guest-checkout.png" alt="..." class="img-responsive"/></div>
                     <div class="col-sm-10">
-                        <h4 class="nomargin"><c:out value="${guest.firstName}"/></h4>
+                        <h4 class="nomargin">
+                            <c:out value="${guest.firstName}"/> <c:out value="${guest.lastName}"/>
+                        </h4>
 
                     </div>
                 </div>
             </td>
             <td data-th="Price">$50.00</td>
             <td data-th="Bed">
-                <input type="number" class="form-control text-center" value="1">
+                <input type="number" class="form-control text-center" value="1" id="duration">
             </td>
-            <td data-th="Subtotal" class="text-center"><c:out value="${guest.room.rate}"/></td>
+            <td data-th="Subtotal" class="text-center" id="subTotal"><c:out value="${guest.room.rate}"/></td>
             <td class="actions" data-th="">
-                <button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
+                <button class="btn btn-info btn-sm" id="refreshTotal"><i class="fa fa-refresh"></i></button>
                 <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>
             </td>
         </tr>
@@ -75,12 +78,12 @@
             <td class="text-center"><strong>Total 1.99</strong></td>
         </tr>
         <tr>
-            <td><a href="#" class="btn btn-warning"><i class="fa fa-angle-left"></i> </a></td>
+            <td></td>
             <td colspan="2" class="hidden-xs"></td>
-            <td class="hidden-xs text-center"><strong>Total <c:out value="${guest.room.rate}"/></strong></td>
+            <td class="hidden-xs text-center"><strong id="totalPrice">Total <c:out value="${guest.room.rate}"/></strong></td>
             <td><a href="#">
                 <input type="hidden" id="guest_id" value="${guest.id}"/>
-                <input class="btn btn-success btn-block" id="btn_add" type="submit" value="checkout" /> <i class="fa fa-angle-right"></i></a></td>
+                <input class="btn btn-success btn-block" id="btn_add" type="submit" value="Checkout" /> </a></td>
 
         </tr>
         </tfoot>
