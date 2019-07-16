@@ -21,7 +21,7 @@
     <br/>
     <span id="contactInfo">
     Maharishi hotel<br/>
-    fairField IO<br/>
+    fairField, IOW<br/>
     phone: 641-252-2525<br/>
         <span id="ourEmail"> ${contactUs}<br/></span>
     </span>
