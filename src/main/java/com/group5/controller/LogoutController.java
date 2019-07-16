@@ -1,5 +1,6 @@
 package com.group5.controller;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,6 +17,7 @@ public class LogoutController extends HttpServlet {
         HttpSession session = req.getSession();
         session.invalidate();
         req.getSession().setAttribute("msg", "You have been logged out successfully!");
-        resp.sendRedirect(req.getContextPath() + "/index.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("login");
+        dispatcher.forward(req, resp);
     }
 }
