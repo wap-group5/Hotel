@@ -41,9 +41,9 @@
     <table id="cart" class="table table-hover table-condensed">
         <thead>
         <tr>
-            <th style="width:50%">Product</th>
-            <th style="width:10%">Price</th>
-            <th style="width:8%">Bed</th>
+            <th style="width:50%">Guest</th>
+            <th style="width:10%">Rate</th>
+            <th style="width:8%">Day/Night</th>
             <th style="width:22%" class="text-center">Subtotal</th>
             <th style="width:10%"></th>
         </tr>
