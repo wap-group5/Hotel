@@ -239,9 +239,9 @@
         </div>
         <div class="modal-body">
             <p id="message"> this is a message</p>
+            <button id="ok"  type="button" class="grp5-button grp5-red grp5-margin-top">OK</button>
         </div>
         <div class="modal-footer">
-            <%--      <h3></h3>--%>
         </div>
     </div>
 

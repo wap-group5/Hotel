@@ -18,7 +18,8 @@ $(function(){
             .done(function (data) {
                 data = JSON.parse(data);
                     if(data.success){
-                        $("#message").text("successfully checked in");
+//                        $("#message").text("successfully checked in");
+                        $("#message").text( data.message);
                     }else{
                         $("#message").text( data.message);
                     }})
@@ -34,6 +35,11 @@ $(function(){
 
     // When the user clicks on <span> (x), close the modal
     $(".close").click(function () {
+        $("#myModal").css("cssText", "display: none !important;");
+        window.scrollTo(0, 0);
+    });
+    // When the user clicks on <span> (x), close the modal
+    $("#ok").click(function () {
         $("#myModal").css("cssText", "display: none !important;");
         window.scrollTo(0, 0);
     });
