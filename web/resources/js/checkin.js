@@ -51,4 +51,22 @@ $(function(){
         }
     }
 
+    $("#btnLogout").click(function (e) {
+        //alert('inside logout');
+        e.preventDefault();
+        $.ajax({
+            url: 'logout',
+            type: 'get',
+            data: {action: 'logout'},
+            success: function (data) {
+                //console.log(data);
+                location.reload();
+                //window.location.href = data;
+
+                var successUrl = "login.jsp";
+                window.location.href = successUrl;
+            }
+        });
+    });
+
 });
