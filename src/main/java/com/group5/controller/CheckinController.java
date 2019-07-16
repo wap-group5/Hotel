@@ -52,6 +52,7 @@ public class CheckinController extends HttpServlet {
                 guestDao.updateGuest(guest);
                 request.getSession().setAttribute("guestDAO", guestDao);
                 checkinReturnModel.setSuccess(true);
+                checkinReturnModel.setMessage("Successfully checked in guest "+ guest.getFirstName() +" " + guest.getLastName());
 
             }else{
                 checkinReturnModel.setSuccess(false);

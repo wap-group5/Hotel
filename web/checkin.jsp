@@ -30,7 +30,7 @@
     <a href="#rooms" class="grp5-bar-item grp5-button grp5-mobile">Rooms</a>
     <a href="#about" class="grp5-bar-item grp5-button grp5-mobile">Information</a>
     <a href="#contact" class="grp5-bar-item grp5-button grp5-mobile">Messages</a>
-    <a href="logout" class="grp5-bar-item grp5-button grp5-right grp5-light-grey grp5-mobile">Logout</a>
+    <a id="btnLogout" class="grp5-bar-item grp5-button grp5-right grp5-light-grey grp5-mobile">Logout</a>
 </div>
 <!-- Header -->
 <header id="header" class="grp5-display-container grp5-content" style="max-width:1500px;">
@@ -239,9 +239,9 @@
         </div>
         <div class="modal-body">
             <p id="message"> this is a message</p>
+            <button id="ok"  type="button" class="grp5-button grp5-red grp5-margin-top">OK</button>
         </div>
         <div class="modal-footer">
-            <%--      <h3></h3>--%>
         </div>
     </div>
 

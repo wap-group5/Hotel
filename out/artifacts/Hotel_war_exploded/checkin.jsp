@@ -50,7 +50,6 @@
                   </tr>
                   </thead>
                 <tbody>
-                <tr>
                 <c:forEach items="${guests}" var="guest">
                     <tr>
                         <td><c:out value="${guest.firstName}" /></td>
@@ -206,8 +205,8 @@
     </div>
 
     <div class="grp5-container grp5-padding-32 grp5-black grp5-opacity grp5-card grp5-hover-opacity-off" style="margin:32px 0;">
-        <h2>Get the best offers first!</h2>
-        <p>Join our newsletter.</p>
+        <h2>Be the first to know</h2>
+        <p>Join our company news letter.</p>
         <label>E-mail</label>
         <input class="grp5-input grp5-border" type="text" placeholder="Your Email address">
         <button type="button" class="grp5-button grp5-red grp5-margin-top">Subscribe</button>
@@ -215,7 +214,7 @@
 
     <div class="grp5-container" id="contact">
         <h2>Messages</h2>
-        <p>Do you need help?, do not hesitate to ask them.</p>
+        <p>Do you need help? Do not hesitate to ask support.</p>
         <i class="fa fa-map-marker grp5-text-red" style="width:30px"></i> Support<br>
         <i class="fa fa-phone grp5-text-red" style="width:30px"></i> Phone: +00 151515<br>
         <i class="fa fa-envelope grp5-text-red" style="width:30px"> </i> Email: support@mail.com<br>
@@ -240,9 +239,9 @@
         </div>
         <div class="modal-body">
             <p id="message"> this is a message</p>
+            <button id="ok"  type="button" class="grp5-button grp5-red grp5-margin-top">OK</button>
         </div>
         <div class="modal-footer">
-            <%--      <h3></h3>--%>
         </div>
     </div>
 
