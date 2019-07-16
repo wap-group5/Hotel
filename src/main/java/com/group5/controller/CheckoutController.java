@@ -32,7 +32,7 @@ public class CheckoutController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 //        request.setAttribute("products", dao.getAllProducts());
-        RequestDispatcher view = request.getRequestDispatcher("login.jsp");
+        RequestDispatcher view = request.getRequestDispatcher("login");
         view.forward(request, response);
     }
 
@@ -46,7 +46,10 @@ public class CheckoutController extends HttpServlet {
         float rate = guest.getRoom().getRate();
          String in= guest.getCheckInTime();
          guestDao.removeGuest(guest);
-        response.sendRedirect("checkin.jsp");
+         request.getSession().setAttribute("guestDAO",guestDao);
+//        response.sendRedirect("login");
+        PrintWriter out = response.getWriter();
+        out.print("success");
     }
 
 }

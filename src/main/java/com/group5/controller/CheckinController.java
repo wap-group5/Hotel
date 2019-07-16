@@ -75,7 +75,7 @@ public class CheckinController extends HttpServlet {
         GuestDao guestDao = (GuestDao) request.getSession().getAttribute("guestDAO");
         Guest guest = guestDao.getGuestById(Integer.parseInt(guestId));
         request.setAttribute("guest",guest);
-        request.getRequestDispatcher("checkout.jsp").forward(request,response);
+        request.getRequestDispatcher("checkout2.jsp").forward(request,response);
 
     }
 }

@@ -78,7 +78,9 @@
             <td><a href="#" class="btn btn-warning"><i class="fa fa-angle-left"></i> </a></td>
             <td colspan="2" class="hidden-xs"></td>
             <td class="hidden-xs text-center"><strong>Total <c:out value="${guest.room.rate}"/></strong></td>
-            <td><a href="checkin.jsp" ><input class="btn btn-success btn-block" id="btn_add" type="submit" value="checkout" /> <i class="fa fa-angle-right"></i></a></td>
+            <td><a href="#">
+                <input type="hidden" id="guest_id" value="${guest.id}"/>
+                <input class="btn btn-success btn-block" id="btn_add" type="submit" value="checkout" /> <i class="fa fa-angle-right"></i></a></td>
 
         </tr>
         </tfoot>

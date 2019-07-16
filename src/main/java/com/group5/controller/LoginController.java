@@ -73,9 +73,15 @@ public class LoginController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/login.jsp");
-
-        dispatcher.forward(request, response);
+            HttpSession session = request.getSession();
+            if(request.getSession().getAttribute("guestDAO") != null){
+                GuestDao localGuestDAO = (GuestDao)request.getSession().getAttribute("guestDAO");
+                request.setAttribute("guests",localGuestDAO.getAllGuest());
+                request.getRequestDispatcher("/checkin.jsp").forward(request, response);
+            }else{
+                RequestDispatcher dispatcher = request.getRequestDispatcher("/login.jsp");
+                dispatcher.forward(request, response);
+            }
     }
 
 

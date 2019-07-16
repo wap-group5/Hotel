@@ -1,6 +1,15 @@
+body{
+    background-image: url("background.png");
+}
 #confirmation{
-    background-image: url("confirmed.png");
     color: blue;
     text-align: center;
     font-size: 30px;
 }
+#contactInfo,#namOfGuest{
+color:red;
+}
+#ourEmail{
+    color :green;
+}
+
