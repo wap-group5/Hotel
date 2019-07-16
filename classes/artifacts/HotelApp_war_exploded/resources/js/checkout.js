@@ -9,12 +9,22 @@ $(function() {
         var guestId = $('#guest_id').val();
         var rentBill = $('#rent_Bill').val();
         var  billingInfo= {id: guestId, bill: rentBill};
-        $.post('checkout',{billingInfo: JSON.stringify(billingInfo)}).always(processData);
+        $.post('checkout',{billingInfo: JSON.stringify(billingInfo)})
+            .done(processData)
+            .fail(function () {
+                alert("An Error occured");
+            });
 
     }
 
-    function processData(data){
-        window.location.href = "login" ;
+    function processData(jsonString){
+        var data = JSON.parse(jsonString);
+        if(data.success) {
+            window.location.href = "login";
+        }else{
+            alert(data.message);
+            window.location.href = "login";
+        }
     }
 
     function refreshTotal() {
