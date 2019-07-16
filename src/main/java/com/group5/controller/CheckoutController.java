@@ -3,6 +3,7 @@ package com.group5.controller;
 import com.google.gson.Gson;
 import com.group5.dao.GuestDao;
 import com.group5.model.BillingInfo;
+import com.group5.model.CheckinReturnModel;
 import com.group5.model.Guest;
 import com.group5.model.User;
 
@@ -43,13 +44,18 @@ public class CheckoutController extends HttpServlet {
         String guestId = billingInfo.getId();
         GuestDao guestDao = (GuestDao) request.getSession().getAttribute("guestDAO");
         Guest guest = guestDao.getGuestById(Integer.parseInt(guestId));
-        float rate = guest.getRoom().getRate();
-         String in= guest.getCheckInTime();
-         guestDao.removeGuest(guest);
-         request.getSession().setAttribute("guestDAO",guestDao);
-//        response.sendRedirect("login");
+        CheckinReturnModel checkinReturnModel = new CheckinReturnModel();
         PrintWriter out = response.getWriter();
-        out.print("success");
+        if(guest.isCheckedin()) {
+            guestDao.removeGuest(guest);
+            request.getSession().setAttribute("guestDAO", guestDao);
+            checkinReturnModel.setSuccess(true);
+            checkinReturnModel.setMessage("Guest successfully checked out");
+        }else{
+            checkinReturnModel.setSuccess(false);
+            checkinReturnModel.setMessage("This guest is not checked in!");
+        }
+        out.print(mapper.toJson(checkinReturnModel));
     }
 
 }
