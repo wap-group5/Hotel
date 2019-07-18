@@ -60,11 +60,14 @@ $(function(){
             data: {action: 'logout'},
             success: function (data) {
                 //console.log(data);
-                location.reload();
+                //location.reload();
                 //window.location.href = data;
-
+                alert("User " + data.username + "has been successfully logout");
                 var successUrl = "login.jsp";
                 window.location.href = successUrl;
+            },
+            fail: function () {
+                alert("An error occured");
             }
         });
     });
